@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: reznionite
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: Reznik's personal Kionite image. Probably no use for anybody else.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-nvidia
@@ -22,9 +22,9 @@ modules:
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
+        - plasma-workspace-x11
+        - moc
         - neofetch
-      # - micro
-      # - starship
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency

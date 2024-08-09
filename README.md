@@ -1,42 +1,43 @@
 # reznionite &nbsp; [![build-ublue](https://github.com/reznik-gh/reznionite/actions/workflows/build.yml/badge.svg)](https://github.com/reznik-gh/reznionite/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+Für eine Schnellanleitung zum Aufbau eines eigenen Repository basierend auf diesem hier, rufe [BlueBuild docs](https://blue-build.org/how-to/setup/) auf.
 
-After setup, it is recommended you update this README to describe your custom image.
+Nach dem Setup solltest du diese README aktualisieren, um dein persönliches Image zu beschreiben. *Yo, sollte ich wohl mal machen, was?* ;)
 
 ## Installation
 
 > **Warning**  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+> [Das hier ist ein experimentells Feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), Eltern haften für ihre Kinder.
 
-To rebase an existing atomic Fedora installation to the latest build:
+Für ein rebase von einer existierenden Fedora atomic Installation zum aktuellsten Build:
+*Wieso sollte man zu etwas anderem als dem aktuellsten wollen? Was für eine unnütze Information. Tsss...*
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+- Zuerst ein rebase zum unsignierten Image, um die Schlüssel und die policies zu bekommen:
   ```
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/reznik-gh/reznionite:latest
   ```
-- Reboot to complete the rebase:
+- Dann den ganzen Bumms neustarten:
   ```
   systemctl reboot
   ```
-- Then rebase to the signed image, like so:
+- Jetzt noch ein rebase zum signierten Image:
   ```
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/reznik-gh/reznionite:latest
   ```
-- Reboot again to complete the installation
+- Noch ein reboot: *Sind wir bald da, Papa Schlumpf?*
   ```
   systemctl reboot
   ```
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+Der `latest` tag zeigt automatisch auf den neuesten build. *Echt? Kein Scheiß?* Dieser build wird immer die Fedora Version, die in der `recipe.yml` angegeben ist, verwenden, so dass du nicht aus versehen auf die nächste Major Version upgradest. *Und wenn ich lastest in der recipe.yml angeben? Finden wir mit Fedora 41 raus. Learning by doing nennt man das.*
 
 ## ISO
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+Es ist möglich eine Iso als Installationsmedium zu generieren, wenn der ganze Bumms direkt auf Fedora Atomic basiert. *Das ist hier nicht der Fall. Ich lass vorerst hier trotzdem drin, weil es gut zu wissen ist.* Kann man aber nicht auf Github hosten, da die ISOs zu groß sind.  Infos wie das geht gibt es [hier](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso).
 
-## Verification
+## Verifizierung
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+Diese Images sind mit [Sigstore](https://www.sigstore.dev/)s [cosign](https://github.com/sigstore/cosign) signiert. Du kannst die Signatur verifizieren, indem du die `cosign.pub` aus diesem Repo runterlädst und folgenden Befehl ausführst:
 
 ```bash
 cosign verify --key cosign.pub ghcr.io/reznik-gh/reznionite

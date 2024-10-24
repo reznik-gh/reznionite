@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: reznionite
+name: reznoite
 # description will be included in the image's metadata
 description: Reznik's personal Kionite image. Probably no use for anybody else.
 

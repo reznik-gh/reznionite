@@ -1,16 +1,37 @@
 # reznionite &nbsp; [![build-ublue](https://github.com/reznik-gh/reznionite/actions/workflows/build.yml/badge.svg)](https://github.com/reznik-gh/reznionite/actions/workflows/build.yml)
 
-Für eine Schnellanleitung zum Aufbau eines eigenen Repository basierend auf diesem hier, rufe [BlueBuild docs](https://blue-build.org/how-to/setup/) auf.
+## Allgemeines
+ Mein eigenes ublue image. Gebaut nach der Anleitung auf [BlueBuild docs](https://blue-build.org/how-to/setup/).
+ ![Screenshot  der KDE Konsole mit den Ausgaben von 'rpm-ostree status' und 'fastfetch'](/reznionite-screenshot.png)
+ 
+ ### Basiert auf
+ kinoite-nvidia
+ 
+ ### Hinzugefügte Pakete
+ - fastfetch & fastfetch-bash-completion
+ - steam-devices
+ - yt-dlp &  yt-dlp-bash-completion
+ - pwgen
+ - screen
+ - xorg-x11-nvidia
+ 
+ ### Entfernte Pakete
+ - firefox &  firefox-langpacks
+ - just
+ 
+ ### Hinzugefügte Dateien
+ *noch nichts*
+ 
+ ### Hinzugefügte configs
+ *noch nichts*
 
-Nach dem Setup solltest du diese README aktualisieren, um dein persönliches Image zu beschreiben. *Yo, sollte ich wohl mal machen, was?* ;)
 
 ## Installation
 
-> **Warning**  
-> [Das hier ist ein experimentells Feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), Eltern haften für ihre Kinder.
+> [!WARNING]
+> [Das hier ist ein experimentells Feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable). *Eltern haften für ihre Kinder.*
 
 Für ein rebase von einer existierenden Fedora atomic Installation zum aktuellsten Build:
-*Wieso sollte man zu etwas anderem als dem aktuellsten wollen? Was für eine unnütze Information. Tsss...*
 
 - Zuerst ein rebase zum unsignierten Image, um die Schlüssel und die policies zu bekommen:
   ```
@@ -24,16 +45,10 @@ Für ein rebase von einer existierenden Fedora atomic Installation zum aktuellst
   ```
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/reznik-gh/reznionite:latest
   ```
-- Noch ein reboot: *Sind wir bald da, Papa Schlumpf?*
+- Noch ein reboot:
   ```
   systemctl reboot
   ```
-
-Der `latest` tag zeigt automatisch auf den neuesten build. *Echt? Kein Scheiß?* Dieser build wird immer die Fedora Version, die in der `recipe.yml` angegeben ist, verwenden, so dass du nicht aus versehen auf die nächste Major Version upgradest. *Und wenn ich lastest in der recipe.yml angeben? Finden wir mit Fedora 41 raus. Learning by doing nennt man das.*
-
-## ISO
-
-Es ist möglich eine Iso als Installationsmedium zu generieren, wenn der ganze Bumms direkt auf Fedora Atomic basiert. *Das ist hier nicht der Fall. Ich lass vorerst hier trotzdem drin, weil es gut zu wissen ist.* Kann man aber nicht auf Github hosten, da die ISOs zu groß sind.  Infos wie das geht gibt es [hier](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso).
 
 ## Verifizierung
 
@@ -42,3 +57,7 @@ Diese Images sind mit [Sigstore](https://www.sigstore.dev/)s [cosign](https://gi
 ```bash
 cosign verify --key cosign.pub ghcr.io/reznik-gh/reznionite
 ```
+  
+## ISO
+
+Es ist möglich eine Iso als Installationsmedium zu generieren, wenn der ganze Bumms direkt auf Fedora Atomic basiert. Kann man aber nicht auf Github hosten, da die ISOs zu groß sind.  Infos wie das geht gibt es [hier](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso).

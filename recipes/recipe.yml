@@ -33,6 +33,7 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
+      - ublue-os-just
       - just
 
   - type: default-flatpaks

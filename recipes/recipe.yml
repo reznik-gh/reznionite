@@ -35,6 +35,7 @@ modules:
       - firefox-langpacks
       - ublue-os-just
       - just
+      - toolbox
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)

@@ -1,11 +1,11 @@
 # reznionite &nbsp; [![build-ublue](https://github.com/reznik-gh/reznionite/actions/workflows/build.yml/badge.svg)](https://github.com/reznik-gh/reznionite/actions/workflows/build.yml)
 
 ## Allgemeines
- Mein eigenes ublue image. Gebaut nach der Anleitung auf [BlueBuild docs](https://blue-build.org/how-to/setup/).
+ Mein eigenes ublue image. Gebaut nach der Anleitung auf [BlueBuild docs](https://blue-build.org/how-to/setup/) :uk:
  ![Screenshot  der KDE Konsole mit den Ausgaben von 'rpm-ostree status' und 'fastfetch'](/reznionite-screenshot.png)
  
  ### Basiert auf
- kinoite-nvidia
+ [kinoite-nvidia](https://github.com/ublue-os/hwe/pkgs/container/kinoite-nvidia)
  
  ### Hinzugefügte Pakete
  - fastfetch & fastfetch-bash-completion
@@ -17,7 +17,7 @@
  
  ### Entfernte Pakete
  - firefox &  firefox-langpacks
- - just
+ - just & ublue-os-just
  
  ### Hinzugefügte Dateien
  *noch nichts*
@@ -29,7 +29,7 @@
 ## Installation
 
 > [!WARNING]
-> [Das hier ist ein experimentells Feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable). *Eltern haften für ihre Kinder.*
+> [Das hier ist ein experimentells Feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) :uk: *Eltern haften für ihre Kinder.*
 
 Für ein rebase von einer existierenden Fedora atomic Installation zum aktuellsten Build:
 
@@ -60,4 +60,4 @@ cosign verify --key cosign.pub ghcr.io/reznik-gh/reznionite
   
 ## ISO
 
-Es ist möglich eine Iso als Installationsmedium zu generieren, wenn der ganze Bumms direkt auf Fedora Atomic basiert. Kann man aber nicht auf Github hosten, da die ISOs zu groß sind.  Infos wie das geht gibt es [hier](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso).
+Es ist möglich eine Iso als Installationsmedium zu generieren, wenn der ganze Bumms direkt auf Fedora Atomic basiert. Kann man aber nicht auf Github hosten, da die ISOs zu groß sind. [Hier](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso) :uk: gibt es Infos wie das geht.

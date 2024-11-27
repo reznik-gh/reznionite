@@ -30,6 +30,7 @@ modules:
         - pwgen
         - screen
         - xorg-x11-nvidia
+        - waydroid
     remove:
       - firefox
       - firefox-langpacks

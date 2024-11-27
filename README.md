@@ -1,5 +1,4 @@
-# reznionite &nbsp; [![build-ublue](https://github.com/reznik-gh/reznionite/actions/workflows/build.yml/badge.svg)](https://github.com/reznik-gh/reznionite/actions/workflows/build.yml)
-
+# reznionite &nbsp; [![build-ublue](https://github.com/reznik-gh/reznionite/actions/workflows/build.yml/badge.svg)](https://github.com/reznik-gh/reznionite/actions/workflows/build.yml) [![build-41](https://github.com/ublue-os/hwe/actions/workflows/build-41.yml/badge.svg)](https://github.com/ublue-os/hwe/actions/workflows/build-41.yml)
 ## Allgemeines
  Mein eigenes ublue image. Gebaut nach der Anleitung auf [BlueBuild docs](https://blue-build.org/how-to/setup/) :uk:
  ![Screenshot  der KDE Konsole mit den Ausgaben von 'rpm-ostree status' und 'fastfetch'](/reznionite-screenshot.png)
